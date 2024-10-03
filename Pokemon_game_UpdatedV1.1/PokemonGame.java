@@ -1126,7 +1126,7 @@ private static void showGui4() {
                             if (isLeftAttack) {
 
                                 playerOneEnergy+=(20-costenergy);
-                                playerTwoHealth -= (damage*playerOnebase)-playerTwodef;
+                                playerTwoHealth -= (damage*playerOnebase)-((playerTwodef/100)*damage);
                                 
                                 healthValueRight.setText(String.valueOf(playerTwoHealth));
                                 energyValueLeft.setText(String.valueOf(playerOneEnergy));
@@ -1174,7 +1174,7 @@ private static void showGui4() {
                                 }
                             } else {
                                 playerTwoEnergy+=(20-costenergy);
-                                playerOneHealth -= (damage*playerTwobase)-playerOnedef;
+                                playerOneHealth -= (damage*playerTwobase)-((playerOnedef/100)*damage);;
                                 healthValueLeft.setText(String.valueOf(playerOneHealth));
                                 energyValueRight.setText(String.valueOf(playerTwoEnergy));
                                 if (playerOneHealth <= 0) {
